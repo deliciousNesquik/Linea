@@ -1,0 +1,50 @@
+{
+  "string": {
+    "type": "primitive"
+  },
+  "double": {
+    "type": "primitive"
+  },
+  "bool": {
+    "type": "bool"
+  },
+  "color": {
+    "type": "color"
+  },
+
+  "Alignment": {
+    "type": "enum",
+    "values": ["Left", "Center", "Right", "Stretch"]
+  },
+
+  "TextAlignment": {
+    "type": "enum",
+    "values": ["Left", "Center", "Right", "Justify"]
+  },
+  
+  "Orientation": {
+    "type": "enum",
+    "values": ["Vertical", "Horizontal"]
+  },
+
+  "FontWeight": {
+    "type": "enum+numeric",
+    "values": [
+      { "label": "Thin",       "value": 100 },
+      { "label": "ExtraLight", "value": 200 },
+      { "label": "Light",      "value": 300 },
+      { "label": "Normal",     "value": 400 },
+      { "label": "Medium",     "value": 500 },
+      { "label": "SemiBold",   "value": 600 },
+      { "label": "Bold",       "value": 700 },
+      { "label": "ExtraBold",  "value": 800 },
+      { "label": "Black",      "value": 900 }
+    ],
+    "allowCustomNumeric": true,
+    "numericRange": {
+      "min": 100,
+      "max": 900,
+      "step": 100
+    }
+  }
+}

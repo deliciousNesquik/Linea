@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+        "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+    <dict>
+        <key>CFBundleName</key>
+        <string>Linea</string>
+
+        <key>CFBundleDisplayName</key>
+        <string>Linea</string>
+
+        <key>CFBundleIdentifier</key>
+        <string>com.deliciousNesquik.linea</string>
+
+        <key>CFBundleVersion</key>
+        <string>1.0.0</string>
+
+        <key>CFBundleExecutable</key>
+        <string>Linea.UI</string>
+
+        <key>CFBundlePackageType</key>
+        <string>APPL</string>
+
+        <key>NSHighResolutionCapable</key>
+        <true/>
+
+        <key>CFBundleIconFile</key>
+        <string>icon</string>
+    </dict>
+</plist>

@@ -1,0 +1,33 @@
+{
+  "Button.Content": "Text displayed inside the button",
+  "Common.Width": "Control width in pixels",
+  "Common.Height": "Control height in pixels",
+  "Control.Background": "Background color of the element",
+  "Control.IsEnabled": "Whether the control is enabled (can be clicked)",
+  "Layout.HorizontalAlignment": "Horizontal alignment within the parent container",
+  "Layout.VerticalAlignment": "Vertical alignment within the parent container",
+  "Text.FontWeight": "Font thickness: normal, bold, etc.",
+
+  "TextBlock.Text": "Text displayed in the TextBlock element",
+  "Text.TextAlignment": "Text alignment within the element",
+  "Text.Foreground": "Text color",
+
+  "TextBox.Text": "Text entered by the user in the field",
+  "TextBox.PlaceholderText": "Placeholder text shown when input is empty",
+  "TextBox.IsReadOnly": "Whether the text field is read-only",
+
+  "CheckBox.Content": "Text displayed next to the checkbox",
+  "CheckBox.IsChecked": "Whether the checkbox is checked (on/off)",
+  "CheckBox.IsThreeState": "Whether the checkbox supports a third (indeterminate) state",
+
+  "ComboBox.SelectedIndex": "Index of the selected item in the list",
+  "ComboBox.IsDropDownOpen": "Whether the ComboBox dropdown is open",
+  "Children.One": "This element can contain one nested element.",
+  "Children.Many": "This element can contain multiple nested elements.",
+  "Children.NoOne": "This element cannot contain nested elements.",
+
+  "Slider.Minimum": "Minimum value of the slider",
+  "Slider.Maximum": "Maximum value of the slider",
+  "Slider.Value": "Current value of the slider",
+  "Slider.Orientation": "Slider orientation: horizontal or vertical"
+}
