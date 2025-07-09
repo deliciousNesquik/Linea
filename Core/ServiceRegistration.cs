@@ -9,10 +9,6 @@ public static class ServiceRegistration
 {
     public static IServiceCollection AddLineaCore(this IServiceCollection services)
     {
-        services.AddSingleton<IOperatingSystemService, OperatingSystemService>();
-        services.AddSingleton<IControlMetadataService, ControlMetadataService>();
-        services.AddSingleton<ILocalizationService, LocalizationService>();
-
         return services;
     }
 }

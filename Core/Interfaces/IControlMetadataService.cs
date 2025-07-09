@@ -4,7 +4,7 @@ using System.IO;
 using System.Text.Json;
 using Linea.Core.Models;
 
-namespace Linea.Core.Interface;
+namespace Linea.Core.Interfaces;
 
 public interface IControlMetadataService
 {
@@ -16,5 +16,5 @@ public interface IControlMetadataService
     /// <exception cref="FileNotFoundException">Файл по указанному пути не найден.</exception>
     /// <exception cref="JsonException">Ошибка разбора JSON-файла.</exception>
     /// <exception cref="InvalidOperationException">Не удалось десериализовать данные в список контролов.</exception>
-    List<Control> LoadControls(string path);
+    public static abstract List<Control> LoadControls(string path);
 }

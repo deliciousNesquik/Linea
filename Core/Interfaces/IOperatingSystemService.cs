@@ -2,8 +2,8 @@ namespace Linea.Core.Interfaces;
 
 public interface IOperatingSystemService
 {
-    bool IsWindows();
-    bool IsMacOS();
-    bool IsLinux();
+    public static bool IsWindows { get; set; }
+    public static bool IsMacOS { get; set; }
+    public static bool IsLinux { get; set; }
     string GetPlatformName(); // Например: "Windows", "macOS", "Linux"
 }

@@ -5,20 +5,16 @@ namespace Linea.Core.Services;
 
 public class OperatingSystemService : IOperatingSystemService
 {
-    public bool IsWindows() =>
-        OperatingSystem.IsWindows();
+    public static bool IsWindows => OperatingSystem.IsWindows();
 
-    public bool IsMacOS() =>
-        OperatingSystem.IsMacOS();
+    public static bool IsMacOS => OperatingSystem.IsMacOS();
 
-    public bool IsLinux() =>
-        OperatingSystem.IsLinux();
+    public static bool IsLinux => OperatingSystem.IsLinux();
 
     public string GetPlatformName()
     {
-        if (IsWindows()) return "Windows";
-        if (IsMacOS()) return "macOS";
-        if (IsLinux()) return "Linux";
-        return "Unknown";
+        if (IsWindows) return "Windows";
+        if (IsMacOS) return "macOS";
+        return IsLinux ? "Linux" : "Unknown";
     }
 }

@@ -1,0 +1,110 @@
+[
+  {
+    "control": "Button",
+    "children": {
+      "allow": true,
+      "maxCount": 1,
+      "descriptionKey": "Children.One"
+    },
+    "attributes": [
+      { "name": "Content", "type": "string", "category": "Common", "defaultValue": "Button", "descriptionKey": "Button.Content" },
+      { "name": "Width", "type": "double", "category": "Layout", "defaultValue": 100, "descriptionKey": "Common.Width" },
+      { "name": "Height", "type": "double", "category": "Layout", "defaultValue": 30, "descriptionKey": "Common.Height" },
+      { "name": "Background", "type": "color", "category": "Appearance", "defaultValue": "#DDDDDD", "descriptionKey": "Control.Background" },
+      { "name": "IsEnabled", "type": "bool", "category": "Behavior", "defaultValue": true, "descriptionKey": "Control.IsEnabled" },
+      { "name": "HorizontalAlignment", "type": "Alignment", "category": "Layout", "defaultValue": "Stretch", "descriptionKey": "Layout.HorizontalAlignment" },
+      { "name": "VerticalAlignment", "type": "Alignment", "category": "Layout", "defaultValue": "Stretch", "descriptionKey": "Layout.VerticalAlignment", "advanced": true },
+      { "name": "FontWeight", "type": "FontWeight", "category": "Appearance", "defaultValue": 400, "descriptionKey": "Text.FontWeight", "advanced": true }
+    ]
+  },
+
+  {
+    "control": "TextBlock",
+    "children": {
+      "allow": false,
+      "maxCount": 0,
+      "descriptionKey": "Children.NoOne"
+    },
+    "attributes": [
+      { "name": "Text", "type": "string", "category": "Common", "defaultValue": "Text", "descriptionKey": "TextBlock.Text" },
+      { "name": "TextAlignment", "type": "TextAlignment", "category": "Text", "defaultValue": "Left", "descriptionKey": "Text.TextAlignment" },
+      { "name": "FontWeight", "type": "FontWeight", "category": "Appearance", "defaultValue": 400, "descriptionKey": "Text.FontWeight" },
+      { "name": "Foreground", "type": "color", "category": "Appearance", "defaultValue": "#000000", "descriptionKey": "Text.Foreground" },
+      { "name": "HorizontalAlignment", "type": "Alignment", "category": "Layout", "defaultValue": "Left", "descriptionKey": "Layout.HorizontalAlignment" }
+    ]
+  },
+
+  {
+    "control": "StackPanel",
+    "children": {
+      "allow": true,
+      "maxCount": 100,
+      "descriptionKey": "Children.Many"
+    },
+    "attributes": [
+      { "name": "Orientation", "type": "Orientation", "category": "Layout", "defaultValue": "Vertical", "descriptionKey": "Panel.Orientation" }]
+  },
+
+  {
+    "control": "TextBox",
+    "children": {
+      "allow": false,
+      "maxCount": 0,
+      "descriptionKey": "Children.NoOne"
+    },
+    "attributes": [
+      { "name": "Text", "type": "string", "category": "Common", "defaultValue": "", "descriptionKey": "TextBox.Text" },
+      { "name": "PlaceholderText", "type": "string", "category": "Common", "defaultValue": "Enter text", "descriptionKey": "TextBox.PlaceholderText" },
+      { "name": "IsReadOnly", "type": "bool", "category": "Behavior", "defaultValue": false, "descriptionKey": "TextBox.IsReadOnly" },
+      { "name": "Background", "type": "color", "category": "Appearance", "defaultValue": "#FFFFFF", "descriptionKey": "Control.Background" },
+      { "name": "Width", "type": "double", "category": "Layout", "defaultValue": 150, "descriptionKey": "Common.Width" },
+      { "name": "Height", "type": "double", "category": "Layout", "defaultValue": 30, "descriptionKey": "Common.Height" }
+    ]
+  },
+
+  {
+    "control": "CheckBox",
+    "children": {
+      "allow": false,
+      "maxCount": 0,
+      "descriptionKey": "Children.NoOne"
+    },
+    "attributes": [
+      { "name": "Content", "type": "string", "category": "Common", "defaultValue": "Check", "descriptionKey": "CheckBox.Content" },
+      { "name": "IsChecked", "type": "bool", "category": "Behavior", "defaultValue": false, "descriptionKey": "CheckBox.IsChecked" },
+      { "name": "IsThreeState", "type": "bool", "category": "Behavior", "defaultValue": false, "descriptionKey": "CheckBox.IsThreeState", "advanced": true },
+      { "name": "Foreground", "type": "color", "category": "Appearance", "defaultValue": "#000000", "descriptionKey": "Text.Foreground" }
+    ]
+  },
+
+  {
+    "control": "ComboBox",
+    "children": {
+      "allow": true,
+      "maxCount": 100,
+      "descriptionKey": "Children.Many"
+    },
+    "attributes": [
+      { "name": "SelectedIndex", "type": "double", "category": "Behavior", "defaultValue": 0, "descriptionKey": "ComboBox.SelectedIndex" },
+      { "name": "IsDropDownOpen", "type": "bool", "category": "Behavior", "defaultValue": false, "descriptionKey": "ComboBox.IsDropDownOpen", "advanced": true },
+      { "name": "Width", "type": "double", "category": "Layout", "defaultValue": 120, "descriptionKey": "Common.Width" },
+      { "name": "Height", "type": "double", "category": "Layout", "defaultValue": 30, "descriptionKey": "Common.Height" }
+    ]
+  },
+
+  {
+    "control": "Slider",
+    "children": {
+      "allow": false,
+      "maxCount": 0,
+      "descriptionKey": "Children.NoOne"
+    },
+    "attributes": [
+      { "name": "Minimum", "type": "double", "category": "Behavior", "defaultValue": 0, "descriptionKey": "Slider.Minimum" },
+      { "name": "Maximum", "type": "double", "category": "Behavior", "defaultValue": 100, "descriptionKey": "Slider.Maximum" },
+      { "name": "Value", "type": "double", "category": "Common", "defaultValue": 50, "descriptionKey": "Slider.Value" },
+      { "name": "Orientation", "type": "enum", "category": "Layout", "defaultValue": "Horizontal", "descriptionKey": "Slider.Orientation", "values": ["Horizontal", "Vertical"] },
+      { "name": "Width", "type": "double", "category": "Layout", "defaultValue": 150, "descriptionKey": "Common.Width" }
+    ]
+  }
+]

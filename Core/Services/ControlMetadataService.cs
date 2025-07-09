@@ -2,24 +2,23 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
-using Linea.Core.Interface;
+using Linea.Core.Interfaces;
 using Linea.Core.Models;
 
 namespace Linea.Core.Services;
 
-public class ControlMetadataService: IControlMetadataService
+public abstract class ControlMetadataService: IControlMetadataService
 { 
-    public List<Control> LoadControls(string path)
+    public static List<Control> LoadControls(string path)
     {
         if (!File.Exists(path))
-            throw new FileNotFoundException($"Файл не найден: {path}");
+            throw new FileNotFoundException($"file not found: {path}");
 
         var json = File.ReadAllText(path);
-
         var result = JsonSerializer.Deserialize<List<Control>>(json);
-
+        
         if (result == null)
-            throw new InvalidOperationException("Не удалось десериализовать файл controls.json.");
+            throw new InvalidOperationException($"Failed to deserialize file: {path}");
         
         return [..result];
     }

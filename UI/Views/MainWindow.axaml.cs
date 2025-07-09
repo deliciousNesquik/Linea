@@ -6,12 +6,12 @@ namespace Linea.UI.Views;
 
 public partial class MainWindow : Window
 {
-    public MainWindow(IOperatingSystemService operatingSystemService)
+    public MainWindow()
     {
         InitializeComponent();
         
         // Установка логотипа (ico / icns) в зависимости от запускаемой платформы.
-        var iconPath = operatingSystemService.IsMacOS() 
+        var iconPath = Core.Services.OperatingSystemService.IsMacOS
             ? "Assets/icons/icon.icns"
             : "Assets/icons/icon.ico";
 

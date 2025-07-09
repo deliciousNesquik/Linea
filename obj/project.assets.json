@@ -1560,11 +1560,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ugly-rizz/Projects/Linea/Linea.csproj",
+      "projectUniqueName": "/Users/ugly-rizz/RiderProjects/Linea/Linea.csproj",
       "projectName": "Linea",
-      "projectPath": "/Users/ugly-rizz/Projects/Linea/Linea.csproj",
+      "projectPath": "/Users/ugly-rizz/RiderProjects/Linea/Linea.csproj",
       "packagesPath": "/Users/ugly-rizz/.nuget/packages/",
-      "outputPath": "/Users/ugly-rizz/Projects/Linea/obj/",
+      "outputPath": "/Users/ugly-rizz/RiderProjects/Linea/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ugly-rizz/.nuget/NuGet/NuGet.Config"
