@@ -24,5 +24,23 @@ public class Attribute
     
     [JsonPropertyName("advanced")]
     public bool Advanced { get; set; } = false;
+    
+    [JsonPropertyName("isContainer")]
+    public bool IsContainer { get; set; } = false;
+    
+    public Attribute Clone()
+    {
+        return new Attribute
+        {
+            Name = this.Name,
+            Value = this.Value,
+            Type = this.Type,
+            Category = this.Category,
+            DefaultValue = this.DefaultValue,
+            Description = this.Description,
+            Advanced = this.Advanced,
+            IsContainer = this.IsContainer
+        };
+    }
 
 }

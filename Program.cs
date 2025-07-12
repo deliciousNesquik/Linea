@@ -18,17 +18,23 @@ abstract class Program
     public static void Main(string[] args)
     {
         var controls = Core.Services.ControlMetadataService.LoadControls("Core/Metadata/controls.json");
-
-        Control button1 = controls[0];
-        Control button2 = controls[0];
-
-        button1.Attributes[0].Value = "10";
-        button2.Attributes[0].Value = "20";
         
-        foreach (var attribute in button1.Attributes)
-        {
-            Console.WriteLine(attribute.Name + ": " + attribute.Value);
-        }
+        Control button1 = controls[0].Clone();
+        Control button2 = controls[0].Clone();
+        Control button3 = controls[0].Clone();
+
+        button1.Attributes[0].Value = "Button 1";
+        button1.Attributes[1].Value = "200";
+        button1.Attributes[2].Value = "30";
+        
+        button2.Attributes[0].Value = "Button 2";
+        button3.Attributes[0].Value = "Button 3";
+
+        button2.Children.Content.Add(button3);
+        button1.Children.Content.Add(button2);
+        
+
+        Console.WriteLine(Core.Services.MarkupGenerationService.Generate(button1));
         
         Services = new ServiceCollection()
             .AddLineaUI()
@@ -36,6 +42,7 @@ abstract class Program
         
         BuildAvaloniaApp()
             .StartWithClassicDesktopLifetime(args);
+        
     }
 
     private static AppBuilder BuildAvaloniaApp()

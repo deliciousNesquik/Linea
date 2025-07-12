@@ -7,7 +7,7 @@
       "descriptionKey": "Children.One"
     },
     "attributes": [
-      { "name": "Content", "type": "string", "category": "Common", "defaultValue": "Button", "descriptionKey": "Button.Content" },
+      { "name": "Content", "type": "string", "category": "Common", "defaultValue": "Button", "descriptionKey": "Button.Content", "isContainer": true },
       { "name": "Width", "type": "double", "category": "Layout", "defaultValue": 100, "descriptionKey": "Common.Width" },
       { "name": "Height", "type": "double", "category": "Layout", "defaultValue": 30, "descriptionKey": "Common.Height" },
       { "name": "Background", "type": "color", "category": "Appearance", "defaultValue": "#DDDDDD", "descriptionKey": "Control.Background" },
