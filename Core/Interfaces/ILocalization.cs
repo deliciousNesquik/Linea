@@ -1,6 +1,6 @@
-namespace Linea.Core.Interface;
+namespace Linea.Core.Interfaces;
 
-public interface ILocalizationService
+public interface ILocalization
 {
     /// <summary>
     /// Пытается загрузить файл локализации по указанному пути.

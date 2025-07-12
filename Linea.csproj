@@ -10,6 +10,7 @@
 
     <ItemGroup>
         <AvaloniaResource Include="UI\Assets\**"/>
+        <Folder Include="Core\Helpers\" />
         <Folder Include="Infrastructure\" />
         <Folder Include="Plugins\" />
         <Folder Include="Tests\Core\" />

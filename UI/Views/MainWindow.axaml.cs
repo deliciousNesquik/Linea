@@ -1,5 +1,7 @@
+using System;
 using System.IO;
 using Avalonia.Controls;
+using Avalonia.Controls.Platform;
 using Linea.Core.Interfaces;
 
 namespace Linea.UI.Views;
@@ -11,7 +13,7 @@ public partial class MainWindow : Window
         InitializeComponent();
         
         // Установка логотипа (ico / icns) в зависимости от запускаемой платформы.
-        var iconPath = Core.Services.OperatingSystemService.IsMacOS
+        var iconPath = OperatingSystem.IsMacOS()
             ? "Assets/icons/icon.icns"
             : "Assets/icons/icon.ico";
 

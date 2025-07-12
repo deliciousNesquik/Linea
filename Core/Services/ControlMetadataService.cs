@@ -7,7 +7,7 @@ using Linea.Core.Models;
 
 namespace Linea.Core.Services;
 
-public abstract class ControlMetadataService: IControlMetadataService
+public abstract class ControlMetadataService: IControlMetadata
 { 
     public static List<Control> LoadControls(string path)
     {

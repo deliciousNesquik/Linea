@@ -6,7 +6,7 @@ using Linea.Core.Models;
 
 namespace Linea.Core.Interfaces;
 
-public interface IControlMetadataService
+public interface IControlMetadata
 {
     /// <summary>
     /// Загружает список UI-контролов из указанного JSON-файла.

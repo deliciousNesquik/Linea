@@ -13,6 +13,7 @@ public partial class App : Application
 {
     public override void Initialize()
     {
+        
         // Установка имени приложения для различных спецификаций систем.
         Current!.Name = "Linea";
         

@@ -1,4 +1,4 @@
-using Linea.Core.Interface;
+using Linea.Core.Interfaces;
 using Linea.Core.Interfaces;
 using Linea.Core.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,6 +9,11 @@ public static class ServiceRegistration
 {
     public static IServiceCollection AddLineaCore(this IServiceCollection services)
     {
+        services.AddSingleton<IMarkupRules, MarkupRules>();
+        services.AddSingleton<IMarkupBuilder, MarkupBuilder>();
+        services.AddSingleton<IMarkupFormatter, MarkupFormatter>();
+        services.AddSingleton<IMarkupGenerator, MarkupGenerator>();
+        
         return services;
     }
 }

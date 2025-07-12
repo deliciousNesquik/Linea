@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
-using Linea.Core.Interface;
+using Linea.Core.Interfaces;
 
 namespace Linea.Core.Services;
 
-public class LocalizationService: ILocalizationService
+public class LocalizationService: ILocalization
 {
     private Dictionary<string, string> _translations = new();
     
