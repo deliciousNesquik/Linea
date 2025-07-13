@@ -16,5 +16,5 @@ public interface IControlMetadata
     /// <exception cref="FileNotFoundException">Файл по указанному пути не найден.</exception>
     /// <exception cref="JsonException">Ошибка разбора JSON-файла.</exception>
     /// <exception cref="InvalidOperationException">Не удалось десериализовать данные в список контролов.</exception>
-    public static abstract List<Control> LoadControls(string path);
+    public List<Control> LoadControls(string path);
 }

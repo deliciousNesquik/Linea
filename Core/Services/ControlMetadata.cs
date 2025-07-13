@@ -7,9 +7,9 @@ using Linea.Core.Models;
 
 namespace Linea.Core.Services;
 
-public abstract class ControlMetadataService: IControlMetadata
+public class ControlMetadata: IControlMetadata
 { 
-    public static List<Control> LoadControls(string path)
+    public List<Control> LoadControls(string path)
     {
         if (!File.Exists(path))
             throw new FileNotFoundException($"file not found: {path}");

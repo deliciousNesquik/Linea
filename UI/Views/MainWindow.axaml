@@ -11,10 +11,36 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-
-    <Button Width="100" Height="30">
-            <Button Width="80" Height="20">
-            </Button>
-    </Button>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" MinHeight="20"/>
+            <RowDefinition Height="*" MinHeight="20"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" MinWidth="20"/>
+            <ColumnDefinition Width="*" MinWidth="20"/>
+            <ColumnDefinition Width="30" MinWidth="20"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid x:Name="ToolPanel" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Margin="2.5">
+            <Border BorderBrush="Gray" BorderThickness="1"/>
+            <ContentControl Content=""/>
+        </Grid>
+        
+        <Grid x:Name="AttributePanel" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Margin="2.5">
+            <Border BorderBrush="Gray" BorderThickness="1"/>
+        </Grid>
+        
+        <Grid x:Name="WorkspacePanel" Grid.Row="1" Grid.Column="1" Margin="2.5">
+            <Border BorderBrush="Gray" BorderThickness="1"/>
+        </Grid>
+        
+        <Grid x:Name="CodePanel" Grid.Row="2" Grid.Column="1" Margin="2.5">
+            <Border BorderBrush="Gray" BorderThickness="1"/>
+        </Grid>
+    </Grid>
     
 </Window>
