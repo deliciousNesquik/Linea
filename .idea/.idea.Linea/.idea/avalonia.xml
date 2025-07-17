@@ -5,6 +5,9 @@
       <map>
         <entry key="App.axaml" value="Linea.csproj" />
         <entry key="UI/App.axaml" value="Linea.csproj" />
+        <entry key="UI/Styles/Button.axaml" value="Linea.csproj" />
+        <entry key="UI/UserControls/ToolBox.axaml" value="Linea.csproj" />
+        <entry key="UI/UserControls/ToolBoxUserControl.axaml" value="Linea.csproj" />
         <entry key="UI/Views/MainWindow.axaml" value="Linea.csproj" />
         <entry key="Views/MainWindow.axaml" value="Linea.csproj" />
       </map>

@@ -1,0 +1,78 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Linea.UI.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+             x:Class="Linea.UI.UserControls.ToolBoxUserControl"
+             x:DataType="vm:ToolBoxViewModel">
+
+    <Design.DataContext>
+        <vm:ToolBoxViewModel />
+    </Design.DataContext>
+
+    <Grid x:Name="Root"
+          RowDefinitions="40, *"
+          ColumnDefinitions="*"
+          MinWidth="120">
+
+        <Border Grid.Row="0" BorderBrush="#DDDDDD" BorderThickness="1" />
+        <Border Grid.Row="1" BorderBrush="#DDDDDD" BorderThickness="1 0 1 1" />
+
+        <TextBlock Grid.Row="0"
+                   Text="ToolBox"
+                   VerticalAlignment="Center"
+                   Margin="10 0 0 0" />
+
+        <Grid Grid.Row="1"
+              VerticalAlignment="Top"
+              HorizontalAlignment="Stretch"
+              Margin="10 10 10 0">
+
+            <TextBox Height="20"
+                     Watermark="Search all control"
+                     CornerRadius="3"
+                     BorderBrush="#DDDDDD"
+                     Margin="0 0 42 0" />
+
+            <Button Width="32"
+                    Height="32"
+                    Background="Transparent"
+                    Padding="0"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    HorizontalAlignment="Right"
+                    CornerRadius="3">
+                <Svg Path="../Assets/images/settings.svg" Width="20" Height="20" />
+            </Button>
+        </Grid>
+
+        <ListBox Grid.Row="1"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
+                 Margin="10 57 10 0"
+                 ItemsSource="{Binding AllControlsList}"
+                 SelectedItem="{Binding SelectedControl}">
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*, 30">
+                        <TextBlock Grid.Column="0"
+                                   VerticalAlignment="Center"
+                                   Text="{Binding Name}"
+                                   HorizontalAlignment="Left" />
+
+                        <Button Grid.Column="1"
+                                Content="+"
+                                Classes="Add"
+                                HorizontalAlignment="Left"
+                                Command="{Binding $parent[ListBox].((vm:ToolBoxViewModel)DataContext).AddControlCommand}"
+                                CommandParameter="{Binding}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+
+</UserControl>

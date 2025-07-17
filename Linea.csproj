@@ -13,7 +13,7 @@
         <Folder Include="Core\Helpers\" />
         <Folder Include="Infrastructure\" />
         <Folder Include="Plugins\" />
-        <Folder Include="Tests\Core\" />
+        <Folder Include="Tests\" />
         <Folder Include="UI\Models\" />
 
         <None Include="UI/Assets/icons/icon.icns">
@@ -22,11 +22,16 @@
         <None Include="Core/Metadata/*">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
+        <None Include="Infrastructure/Configs/*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Avalonia" Version="11.3.0"/>
+        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.3.0" />
         <PackageReference Include="Avalonia.Desktop" Version="11.3.0"/>
+        <PackageReference Include="Avalonia.Markup.Xaml.Loader" Version="11.3.0" />
         <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.0"/>
         <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.0"/>
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
@@ -36,6 +41,8 @@
         </PackageReference>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0-preview.5.25277.114" />
+        <PackageReference Include="Svg.Controls.Skia.Avalonia" Version="11.3.0.2-beta.1" />
+        <PackageReference Include="Svg.Skia" Version="3.0.4-beta.1" />
     </ItemGroup>
 
     <ItemGroup>

@@ -28,12 +28,12 @@ public partial class App : Application
         {
             DisableAvaloniaDataAnnotationValidation();
 
-            var mainWindow = Program.Services!.GetRequiredService<MainWindow>();
-            var mainWindowViewModel = Program.Services!.GetRequiredService<MainWindowViewModel>();
+            //var mainWindow = Program.Services!.GetRequiredService<MainWindow>();
+            //var mainWindowViewModel = Program.Services!.GetRequiredService<MainWindowViewModel>();
             
-            desktop.MainWindow = mainWindow;
+            desktop.MainWindow = new MainWindow
             {
-                DataContext = mainWindowViewModel;
+                DataContext = new MainWindowViewModel()
             };
         }
         base.OnFrameworkInitializationCompleted();

@@ -1,0 +1,20 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <Button Classes="Add" Content="+"/>
+        </Border>
+    </Design.PreviewWith>
+
+    <Style Selector="Button.Add">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="DodgerBlue"/>
+        <Setter Property="BorderBrush" Value="DodgerBlue"/>
+    </Style>
+    
+    <Style Selector="Button.Add:pointerover /template/ContentPresenter">
+        <Setter Property="Background" Value="LightGray"/>
+        <Setter Property="Foreground" Value="DodgerBlue"/>
+        <Setter Property="BorderBrush" Value="DodgerBlue"/>
+    </Style>
+</Styles>

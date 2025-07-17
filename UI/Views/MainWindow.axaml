@@ -1,9 +1,11 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:Linea.UI.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:vm="using:Linea.UI.ViewModels"
+        mc:Ignorable="d" 
+        d:DesignWidth="800" 
+        d:DesignHeight="450"
         x:Class="Linea.UI.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Title="Linea">
@@ -12,35 +14,52 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
     
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*" MinHeight="20"/>
-            <RowDefinition Height="*" MinHeight="20"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" MinWidth="20"/>
-            <ColumnDefinition Width="*" MinWidth="20"/>
-            <ColumnDefinition Width="30" MinWidth="20"/>
-        </Grid.ColumnDefinitions>
+    <Grid ColumnDefinitions="200, 2, *, 2, 250" RowDefinitions="*, *">
+        <!--<Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" BorderBrush="Gray" BorderThickness="1"/>
+        <Border Grid.Column="2" Grid.Row="0" BorderBrush="Gray" BorderThickness="1"/>
+        <Border Grid.Column="2" Grid.Row="1" BorderBrush="Gray" BorderThickness="1"/>
+        <Border Grid.Column="4" Grid.Row="0" Grid.RowSpan="2" BorderBrush="Gray" BorderThickness="1"/>-->
         
-        <Grid x:Name="ToolPanel" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Margin="2.5">
-            <Border BorderBrush="Gray" BorderThickness="1"/>
-            <ContentControl Content=""/>
+        <GridSplitter Grid.Row="0" Grid.Column="1"/>
+        
+        <ContentControl Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Content="{Binding LeftPanelUserControl}"/>
+        
+        
+        <!--<ListBox ItemsSource="{Binding AllControls}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" SelectedItem="{Binding SelectedControl}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        <Grid Grid.Column="1" Grid.Row="0">
+            <Border BorderThickness="2"
+                    BorderBrush="Gray"
+                    Padding="10"
+                    Background="White"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                <ContentControl Content="{Binding Control}" />
+            </Border>
         </Grid>
         
-        <Grid x:Name="AttributePanel" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Margin="2.5">
-            <Border BorderBrush="Gray" BorderThickness="1"/>
-        </Grid>
         
-        <Grid x:Name="WorkspacePanel" Grid.Row="1" Grid.Column="1" Margin="2.5">
-            <Border BorderBrush="Gray" BorderThickness="1"/>
-        </Grid>
+        <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding MarkupCode}" AcceptsReturn="True"/>
         
-        <Grid x:Name="CodePanel" Grid.Row="2" Grid.Column="1" Margin="2.5">
-            <Border BorderBrush="Gray" BorderThickness="1"/>
-        </Grid>
+        <DataGrid Grid.Column="2" Grid.Row="0" Grid.RowSpan="2"
+                  GridLinesVisibility="All"
+                  CanUserResizeColumns="True"
+                  SelectedItem="{Binding SelectedAttribute}"
+                  ItemsSource="{Binding AttributesSelectedControl}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Attribute" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Value" Binding="{Binding Value}"/>
+            </DataGrid.Columns>
+        </DataGrid>-->
+        
+        
+        
     </Grid>
     
 </Window>
